@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>浏览器对象</title>
+  </head>
+  <body>
+    <section id="show">
+
+    </section>
+
+    <section class="screen">
+      <span>屏幕高度：<em id="height"></em></span>
+      <span>屏幕宽度：<em id="width"></em></span>
+      <br>
+      <span>可用高度：<em id="availHeight"></em></span>
+      <span>可用宽度：<em id="availWidth"></em></span>
+      <br>
+      <em id="updateInterval"></em>
+
+    </section>
+
+    <script>
+       document.getElementById('availHeight').innerHTML = window.screen.availHeight;
+       document.getElementById('availWidth').innerHTML = screen.availWidth;
+       document.getElementById('width').innerHTML = screen.width;
+       document.getElementById('height').innerHTML = screen.height;
+       document.getElementById('updateInterval').innerHTML = screen.updateInterval;
+        //window 对象
+        var i=0;
+        for(project in window){
+          i++;
+          console.log(i+":"+project);
+        }
+    </script>
+  </body>
+</html>

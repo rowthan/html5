@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>测试浏览器HTML支持程度</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+  <header><h2>windows对象内容</h2></header>
+  <section id="object" style="overflow-y: scroll; height: 200px;max-width: 400px;">
+    object
+  </section>
+</body>
+<script>
+  var object = document.getElementById("object");
+  var objectTxt = "";
+  for (elemet in window) {
+    objectTxt += elemet + "<br>";
+  }
+  object.innerHTML = objectTxt;
+</script>
+</html>
